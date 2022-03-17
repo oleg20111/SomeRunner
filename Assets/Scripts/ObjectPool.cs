@@ -20,6 +20,17 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
+    protected void Initialize(GameObject[] prefab)
+    {
+        for (int i = 0; i < _capicaty; i++)
+        {
+            int randomIndex = Random.Range(0, prefab.Length);
+            GameObject spawned = Instantiate(prefab[randomIndex], _container.transform);
+            spawned.SetActive(false);
+            _pool.Add(spawned);
+        }
+    }
+
     protected bool TryGetObject(out GameObject result)
     {
         result = _pool.FirstOrDefault(p => p.activeSelf == false);
