@@ -4,3 +4,5 @@ Logs
 Temp
 UserSettings
 SomeRunner.sln
+obj
+Assembly-CSharp.csproj
