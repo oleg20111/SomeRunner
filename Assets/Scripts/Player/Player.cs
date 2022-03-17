@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        _health = -damage;
+        _health -= damage;
 
         if (_health <= 0)
             Die();
