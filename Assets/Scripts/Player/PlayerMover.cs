@@ -24,13 +24,13 @@ public class PlayerMover : MonoBehaviour
 
     public void TryMoveUp()
     {
-        if (transform.position.y < _maxHeight)
+        if (_targetPosition.y < _maxHeight)
             SetNexPosition(_stepSize);
     }
 
     public void TryMoveDown()
     {
-        if (transform.position.y > _minHeight)
+        if (_targetPosition.y > _minHeight)
             SetNexPosition(-_stepSize);
     }
 

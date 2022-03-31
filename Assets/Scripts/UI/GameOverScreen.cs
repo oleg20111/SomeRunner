@@ -14,6 +14,7 @@ public class GameOverScreen : MonoBehaviour
     private void Start()
     {
         _gameOverGroup.alpha = 0;
+        _gameOverGroup.blocksRaycasts = false;
     }
 
     private void OnEnable()
@@ -33,6 +34,7 @@ public class GameOverScreen : MonoBehaviour
     private void OnDied()
     {
         _gameOverGroup.alpha = 1;
+         _gameOverGroup.blocksRaycasts = true;
         Time.timeScale = 0;
     }
 
